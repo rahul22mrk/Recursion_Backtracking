@@ -15,6 +15,9 @@ This repository contains Java programs that solve classic **subsequence problems
 3. `OneSubsequenceWithSumK.java`  
    ➤ Return any one subsequence whose sum is equal to K
 
+4. `CountSubsequenceWithSumK.java`  
+   ➤ Count total number of subsequences whose sum is equal to K
+
 ---
 
 ## ✅ Example Input
@@ -64,6 +67,18 @@ OR
 **Time Complexity:** O(2^n)  
 **Space Complexity:** O(n)  
 **Concepts:** Recursion, Backtracking, Early Return Optimization
+
+---
+
+## 📂 4. CountSubsequenceWithSumK.java
+
+**Output:**  
+Total subsequences with sum 2: 2  
+(→ [1, 1] and [2])
+
+**Time Complexity:** O(2^n)  
+**Space Complexity:** O(n)  
+**Concepts:** Recursion, Backtracking, Counting Valid Paths
 
 ---
 
