@@ -1,50 +1,73 @@
-# Recursion & Backtracking – Java
+# 🔁 Recursion & Backtracking – Java
 
-This repository contains Java programs that solve problems related to subsequence generation using recursion and backtracking. It includes:
+This repository contains Java programs that solve classic **subsequence problems** using **recursion and backtracking**.
 
-1. Generating all subsequences of an array  
-2. Returning all subsequences with sum = K  
-3. Returning any one subsequence with sum = K
+---
 
-File: SubsequenceProblems.java → All 3 problems implemented in one file.
+## 📁 Files Overview
 
-Example Input: arr = {1, 2, 1}, k = 2
+1. `GenerateAllSubsequences.java`  
+   ➤ Generate all possible subsequences of an array
 
-1. All Subsequences
+2. `SubsequenceWithSumK.java`  
+   ➤ Return all subsequences whose sum is equal to K
 
-Output:
-[1, 2, 1]
-[1, 2]
-[1, 1]
-[1]
-[2, 1]
-[2]
-[1]
+3. `OneSubsequenceWithSumK.java`  
+   ➤ Return any one subsequence whose sum is equal to K
+
+---
+
+## ✅ Example Input
+
+arr = {1, 2, 1}  
+k = 2
+
+---
+
+## 📂 1. GenerateAllSubsequences.java
+
+**Output:**
+[1, 2, 1]  
+[1, 2]  
+[1, 1]  
+[1]  
+[2, 1]  
+[2]  
+[1]  
 []
 
-Time: O(2^n * n)  
-Space: O(2^n * n)  
-Concepts: Recursion, Backtracking, Subset Generation
+**Time Complexity:** O(2^n × n)  
+**Space Complexity:** O(2^n × n)  
+**Concepts:** Recursion, Backtracking, Subset Generation
 
-2. All Subsequences with Sum = 2
+---
 
-Output:
-[1, 1]
+## 📂 2. SubsequenceWithSumK.java
+
+**Output:**
+[1, 1]  
 [2]
 
-Time: O(2^n * n)  
-Space: O(2^n * n)  
-Concepts: Recursion, Backtracking, Subset Filtering by Sum
+**Time Complexity:** O(2^n × n)  
+**Space Complexity:** O(2^n × n)  
+**Concepts:** Recursion, Backtracking, Filtering by Target Sum
 
-3. One Subsequence with Sum = 2
+---
 
-Output:
-One subsequence with sum 2: [1, 1]
-OR
-One subsequence with sum 2: [2]
+## 📂 3. OneSubsequenceWithSumK.java
 
-Time: O(2^n)  
-Space: O(n)  
-Concepts: Recursion, Backtracking, Early Stopping on First Match
+**Output (any one valid):**  
+[1, 1]  
+OR  
+[2]
 
-Author: Rahul Gupta
+**Time Complexity:** O(2^n)  
+**Space Complexity:** O(n)  
+**Concepts:** Recursion, Backtracking, Early Return Optimization
+
+---
+
+## 🙌 Author
+
+**Rahul Gupta**  
+Building solid recursion and DSA foundations in Java 🔥
