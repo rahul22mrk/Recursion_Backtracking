@@ -31,3 +31,19 @@ This repository contains a Java program that recursively generates and returns a
 The function uses recursion to include and exclude each element, building all combinations while preserving order.
 
 
+# Subsequence Sum K - Java
+
+This Java program returns all subsequences (subsets) of an array whose sum is exactly equal to a given target value `k`, using recursion.
+
+---
+
+## 📌 Example
+
+**Input:**
+```java
+arr = {1, 2, 1}, k = 2
+[1, 1]  
+[2]
+
+
+
