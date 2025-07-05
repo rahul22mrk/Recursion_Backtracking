@@ -1,125 +1,50 @@
-# Recursion_Backtracking
+# Recursion & Backtracking – Java
 
-# All Subsequences of Array in Java
+This repository contains Java programs that solve problems related to subsequence generation using recursion and backtracking. It includes:
 
-This repository contains a Java program that recursively generates and returns all possible subsequences (subsets) of an integer array.
+1. Generating all subsequences of an array  
+2. Returning all subsequences with sum = K  
+3. Returning any one subsequence with sum = K
 
-## Example
+File: SubsequenceProblems.java → All 3 problems implemented in one file.
 
-**Input:**  
-`arr = {3, 1, 2}`
+Example Input: arr = {1, 2, 1}, k = 2
 
-**Output:**
-[3,1,2]
-[3,1]
-[3,2]
-[3]
-[1,2]
+1. All Subsequences
+
+Output:
+[1, 2, 1]
+[1, 2]
+[1, 1]
 [1]
+[2, 1]
 [2]
+[1]
 []
 
-## Time and Space Complexity
+Time: O(2^n * n)  
+Space: O(2^n * n)  
+Concepts: Recursion, Backtracking, Subset Generation
 
-- **Time Complexity:** O(2ⁿ × n)  
-- **Space Complexity:**  
-  - Stack: O(n)  
-  - Result Storage: O(2ⁿ × n)
+2. All Subsequences with Sum = 2
 
-## How It Works
-
-The function uses recursion to include and exclude each element, building all combinations while preserving order.
-
-
-# Subsequence Sum K - Java
-
-This Java program returns all subsequences (subsets) of an array whose sum is exactly equal to a given target value `k`, using recursion.
-
----
-
-## 📌 Example
-
-**Input:**
-```java
-arr = {1, 2, 1}, k = 2
-[1, 1]  
+Output:
+[1, 1]
 [2]
 
-⏱ Time & Space Complexity
-Time: O(2ⁿ × n)
+Time: O(2^n * n)  
+Space: O(2^n * n)  
+Concepts: Recursion, Backtracking, Subset Filtering by Sum
 
-Space:
+3. One Subsequence with Sum = 2
 
-Stack: O(n)
-
-Result: O(2ⁿ × n)
-🧠 Concepts Used
-Backtracking
-
-Recursion
-
-Subsequence generation
-
-Sum filtering
-
-# 🎯 One Subsequence with Sum = K (Java)
-
-This Java program uses recursion and backtracking to return **any one subsequence** from a given array whose elements sum up to a target value `k`.
-
----
-
-## 📥 Input
-
-- An integer array: `arr = {1, 2, 1}`
-- A target sum: `k = 2`
-
----
-
-## 📤 Output
-
-The program returns any one valid subsequence whose sum is exactly `k`.
-
-### Example Output:
+Output:
 One subsequence with sum 2: [1, 1]
-OR  
+OR
+One subsequence with sum 2: [2]
 
-(Any one valid match is accepted.)
+Time: O(2^n)  
+Space: O(n)  
+Concepts: Recursion, Backtracking, Early Stopping on First Match
 
----
-
-## ⏱ Time and Space Complexity
-
-| Metric           | Value          |
-|------------------|----------------|
-| Time Complexity  | O(2ⁿ)          |
-| Space Complexity | O(n) (stack + result) |
-
-- Time is O(2ⁿ) in worst case (all paths explored).
-- Space is O(n) due to recursion depth and result size.
-
----
-
-## 🧠 Concepts Used
-
-- Recursion
-- Backtracking
-- Subsequence generation
-- Pruning early on first valid result
-
----
-
-## ✅ How It Works
-
-At each index:
-- Try including the element → recurse
-- If found, return
-- Else backtrack → try excluding the element
-- Return as soon as a valid subsequence is found
-
----
-
-## 🧪 Test It
-
-You can run this with any input by modifying the array and `k` in the `main` method.
-
-
+Author: Rahul Gupta
