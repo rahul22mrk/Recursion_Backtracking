@@ -18,6 +18,12 @@ This repository contains Java programs that solve classic **subsequence problems
 4. `CountSubsequenceWithSumK.java`  
    ➤ Count total number of subsequences whose sum is equal to K
 
+5. `RandomizedQuickSort.java`  
+   ➤ Sort an array using Hoare's partition and random pivot (Quick Sort)
+   
+6. `MergeSort.java`  
+   ➤ Sort an array using Merge Sort
+
 ---
 
 ## ✅ Example Input
@@ -81,6 +87,41 @@ Total subsequences with sum 2: 2
 **Concepts:** Recursion, Backtracking, Counting Valid Paths
 
 ---
+
+
+## 📂 5. RandomizedQuickSort.java
+
+Sort an array using **Hoare's partitioning scheme** and **randomized pivot**.
+
+**Input:**
+[4, 6, 2, 5, 7, 9, 1, 3]
+
+**Output:**
+[1, 2, 3, 4, 5, 6, 7, 9]
+
+**Time Complexity:**  
+Best/Average – O(n log n)  
+Worst – O(n²) (minimized using random pivot)
+
+**Space Complexity:** O(log n)  
+**Concepts:** Recursion, In-place Sorting, Hoare Partitioning, Randomized Pivot
+
+---
+
+📂 6. MergeSort.java
+Sort an array using Merge Sort (Divide and Conquer approach).
+
+Input:
+[9, 4, 7, 6, 3, 1, 5]
+
+Output:
+[1, 3, 4, 5, 6, 7, 9]
+
+Time Complexity:
+Best / Average / Worst – O(n log n)
+
+Space Complexity: O(n)
+Concepts: Recursion, Divide & Conquer, Stable Sort, Not In-place
 
 ## 🙌 Author
 
