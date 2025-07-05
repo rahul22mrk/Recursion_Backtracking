@@ -45,5 +45,20 @@ arr = {1, 2, 1}, k = 2
 [1, 1]  
 [2]
 
+⏱ Time & Space Complexity
+Time: O(2ⁿ × n)
 
+Space:
+
+Stack: O(n)
+
+Result: O(2ⁿ × n)
+🧠 Concepts Used
+Backtracking
+
+Recursion
+
+Subsequence generation
+
+Sum filtering
 
