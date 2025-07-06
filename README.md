@@ -24,8 +24,11 @@ This repository contains Java programs that solve classic **subsequence problems
 6. `MergeSort.java`  
    ➤ Sort an array using Merge Sort
 
- 7. `CombinationSum.java`  
+7. `CombinationSum.java`  
    ➤ Find all combinations where elements (repeatedly used) sum up to a target value
+
+8. `CombinationSum-II.java`  
+   ➤  Find all **unique combinations** where each element is used **at most once** and the sum equals the target. Duplicates in input are handled gracefully to avoid duplicate combinations.
 
 
 ## 🙌 Author
