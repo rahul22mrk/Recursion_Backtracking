@@ -33,6 +33,11 @@ This repository contains Java programs that solve classic **subsequence problems
 9. `SubsetSums.java`  
    ➤  Return the sum of all subsets of a given array using recursion.
 
+10. `SubsetsWithDup.java`  
+   ➤  Generate all unique subsets of an array with possible duplicates using backtracking.
+
+
+
 
 ## 🙌 Author
 
