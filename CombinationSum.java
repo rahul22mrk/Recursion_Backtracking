@@ -84,3 +84,22 @@ public class CombinationSum {
         }
     }
 }
+
+candidates = [2, 3], target = 5
+🌳 Recursion Tree Format (with index, target, and current)
+    candidates = [2, 3]
+
+                                      (i=0, t=5, curr=[])
+                                      /                   \
+                        take 2                            skip 2
+                           |                                 |
+                  (i=0, t=3, curr=[2])              (i=1, t=5, curr=[])
+                   /                \                    /              \
+            take 2               skip 2           take 3            skip 3
+              |                    |                 |                  |
+  (i=0, t=1, curr=[2,2])   (i=1, t=3, curr=[2])   (i=1, t=2, curr=[3])  (X)
+        /      \               /       \            /      \
+   take2    skip2       take3     skip3     take3     skip3
+     |         |            |         |         |         |
+(i=0,t=-1,[2,2,2]) ❌  (i=1,t=1,[2,2])  (i=1,t=0,[2,3]) ✅  (i=2,t=3,[2])❌  (i=1,t=-1,[3,3])❌  (i=2,t=2,[3])❌
+
