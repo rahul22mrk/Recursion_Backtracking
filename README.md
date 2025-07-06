@@ -30,6 +30,9 @@ This repository contains Java programs that solve classic **subsequence problems
 8. `CombinationSum-II.java`  
    ➤  Find all **unique combinations** where each element is used **at most once** and the sum equals the target. Duplicates in input are handled gracefully to avoid duplicate combinations.
 
+9. `SubsetSums.java`  
+   ➤  Return the sum of all subsets of a given array using recursion.
+
 
 ## 🙌 Author
 
