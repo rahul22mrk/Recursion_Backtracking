@@ -1,0 +1,82 @@
+/**
+ * Author: Rahul Gupta
+ * Title: Permutations – Generate All Possible Permutations (Backtracking)
+ *
+ * Description:
+ * This Java program generates all possible permutations of a given array of distinct integers.
+ * It uses backtracking to explore each possible arrangement by maintaining a boolean frequency
+ * array to mark the elements that are already included in the current permutation.
+ *
+ * At each recursion level, it iterates over the array, picks unused elements, adds them to the
+ * current list, and recursively proceeds until the permutation is complete.
+ * 
+ * Input Example:
+ * nums = [1, 2, 3]
+ *
+ * Output Example:
+ * [
+ *   [1, 2, 3],
+ *   [1, 3, 2],
+ *   [2, 1, 3],
+ *   [2, 3, 1],
+ *   [3, 1, 2],
+ *   [3, 2, 1]
+ * ]
+ * 
+ * -------------------------------------------------------------
+ * Time Complexity: O(N × N!)
+ *   - There are N! permutations and each takes O(N) to build.
+ *
+ * Space Complexity:
+ *   - Auxiliary Stack Space: O(N) (due to recursion depth)
+ *   - Result Storage: O(N × N!) (for storing all permutations)
+ * -------------------------------------------------------------
+ */
+// Filename: Permutations.java
+
+import java.util.*;
+
+public class Solution {
+    public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        boolean[] freq = new boolean[nums.length];
+        recurPermute(nums, new ArrayList<>(), res, freq);
+        return res;
+    }
+
+    private void recurPermute(int[] nums, List<Integer> current, List<List<Integer>> res, boolean[] freq) {
+        if (current.size() == nums.length) {
+            res.add(new ArrayList<>(current));  // Found one permutation
+            return;
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (!freq[i]) {
+                freq[i] = true;                 // Mark as used
+                current.add(nums[i]);          // Choose
+                recurPermute(nums, current, res, freq); // Explore
+                freq[i] = false;                // Unmark
+                current.remove(current.size() - 1); // Undo choice (Backtrack)
+            }
+        }
+    }
+}
+
+
+/*
+Recursion Tree for nums = [1, 2, 3]:
+
+Format: [current list]     freq = [is 1 used?, is 2 used?, is 3 used?]
+
+                                []                  freq = [F, F, F]
+         _______________________|_________________________
+        |                       |                        |
+     [1] freq=[T,F,F]       [2] freq=[F,T,F]         [3] freq=[F,F,T]
+       ___|___                 ___|___                  ___|___
+      |       |               |       |                |       |
+[1,2]freq=[T,T,F]  [1,3]freq=[T,F,T] [2,1]freq=[T,T,F] [2,3]freq=[F,T,T] [3,1]freq=[T,F,T] [3,2]freq=[F,T,T]
+   |                 |               |                   |               |                 |
+[1,2,3] ✅       [1,3,2] ✅      [2,1,3] ✅         [2,3,1] ✅       [3,1,2] ✅         [3,2,1] ✅
+freq=[T,T,T]    freq=[T,T,T]    freq=[T,T,T]       freq=[T,T,T]     freq=[T,T,T]     freq=[T,T,T]
+*/
+
